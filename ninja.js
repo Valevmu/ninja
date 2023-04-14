@@ -13,12 +13,34 @@ class Ninja {
 
     }
     drinkSake() {
-        console.log( " 10 " + this.salud)
+        console.log(  " 10 "  +  this.salud )
 
     }
 }
-const ninja = new Ninja ("Valentina", "excelente", "3", "3");
+class Sensei extends Ninja {
+    constructor (nombre, salud, velocidad, fuerza, sabiduria) {
+        super(nombre, salud, velocidad, fuerza);
+        this.sabiduria = sabiduria;
 
-ninja.sayName();
-ninja.showStats();
-ninja.drinkSake();
+    }
+    speaksWindsdom() {
+        console.log("Lo que un programador puede hacer en un mes, dos programadores pueden hacerlo en dos meses.");
+    }
+
+}
+// const ninja = new Ninja ("Valentina", "excelente", "3", "3");
+
+// ninja.sayName();
+// ninja.showStats();
+// ninja.drinkSake();
+
+//Herencia
+ const Supersensei =  new Sensei ("Master Splinter", "200", "10", "10", "10");
+Supersensei.sayName();
+Supersensei.speaksWindsdom();
+Supersensei.showStats();
+
+//Output
+// Master Splinter
+// "Lo que un programador puede hacer en un mes, dos programadores pueden hacerlo en dos meses
+// Mi nombre es Master Splinter ,mi salud es 200 mi fuerza es 10 y mi velocidad es 10
